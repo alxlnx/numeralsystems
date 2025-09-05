@@ -1,0 +1,242 @@
+﻿<Window x:Class="Main.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Main"
+        mc:Ignorable="d"
+        
+        MinHeight="450" MinWidth="450"
+        MaxHeight="450" MaxWidth="450" 
+        Height="450" Width="450"
+        
+        Title="Помощь" 
+>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <!-- Строка для панели с буквами -->
+            
+            <RowDefinition/>
+            <!-- Строка для текста о переводе -->
+        </Grid.RowDefinitions>
+
+        <!--=============================== ВЕРХНЯЯ ПАНЕЛЬ ДЛЯ БУКВ ==============================-->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <!-- Колонка для буквы -->
+                
+                <ColumnDefinition/>
+                <!-- Колонка для номера буквы -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Label "Буква:" -->
+            <Border BorderBrush="Aquamarine" BorderThickness="2" Grid.Column="0">
+                <Label Content="Буква:" FontSize="17"
+                       HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Border>
+
+            <!-- Textbox для ввода символа -->
+            <Border BorderBrush="Aquamarine" BorderThickness="2" Margin="80 0 0 0" Grid.Column="0">
+                <Viewbox>
+                    <TextBox x:Name="Input"
+                        BorderThickness="0"
+                        FontSize="28" Padding="0 0 0 0" TextAlignment="Center" 
+                        TextChanged="NewInput"
+                        Grid.Column="0"/>
+                </Viewbox>
+            </Border>
+
+            <!-- Label для отображения номера символа -->
+            <Border BorderBrush="DarkCyan" BorderThickness="2" Grid.Column="1">
+                <Label x:Name="InputAnswer" 
+                    Content="Буква в 10 СИ: " FontSize="17" 
+                    HorizontalAlignment="Left" VerticalAlignment="Center"
+                    Grid.Column="1"/>
+            </Border>
+        </Grid>
+
+        <!--===================== НИЖНЯЯ ПАНЕЛЬ С ТЕКСТОМ О ПЕРЕВОДЕ ЧИСЕЛ =======================-->
+        <Grid Grid.Row="1" >
+            <FlowDocumentScrollViewer Focusable="False">
+                <FlowDocument>
+                    <!--============== НАЧАЛО ТЕКСТА ===================-->
+                    <!--===== Перевод числа из 10 си в любую другую =====-->
+                    <Paragraph>
+                        <Bold FontFamily="Forza">Перевод числа из 10 системы в любую другую</Bold>
+                    </Paragraph>
+                    <Paragraph FontFamily="Bookerly">
+                        Делим исходное число на основание системы 
+                        и записываем остатки до тех пор, пока 
+                        частным от деления не станет 0. 
+                        Затем переводим все полученные остатки
+                        в конечную систему счисления
+                        (к примеру, остаток 12 равен C)
+                        и записываем их в обратном порядке.
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <Image Source="Images/Example1.png" Height="287"/>
+                    </BlockUIContainer>
+
+                    <!--===== Перевод числа из любой системы в 10 =====-->
+                    <Paragraph>
+                        <Bold FontFamily="Forza">Перевод числа из любой системы в 10</Bold>
+                    </Paragraph>
+                    <Paragraph FontFamily="Bookerly">
+                        Каждый символ исходного числа 
+                        переводим в 10 систему счисления 
+                        (можно использовать панель сверху)
+                        и умножаем на соответствующую степень основания 
+                        (увеличивается справа налево).
+                        <LineBreak/>
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <Image Source="Images/Example2.png" Height="287"/>
+                    </BlockUIContainer>
+                    <Paragraph FontFamily="Bookerly">
+                        <Run FontWeight="UltraBlack">
+                            Используя этот и предыдущий методы, можно перевести число
+                            из любой системы в любую, просто выполнив промежуточный перевод в десятичную.
+                        </Run>
+                    </Paragraph>
+
+                    <!--===== Перевод числа из 2 в 8 и 16 системы (и наоборот)===== -->
+                    <Paragraph>
+                        <Bold FontFamily="Forza">Перевод числа из 2 в 8 и 16 системы (и наоборот)</Bold>
+                    </Paragraph>
+                    <Paragraph FontFamily="Bookerly">
+                        <Run FontFamily="Forza" FontWeight="DemiBold">Из 2 в 16 или 8</Run>
+                            <LineBreak/>
+                        Разбиваем число на группы по 
+                        3 (для 8 системы) или 4 (для 16 системы) бита и 
+                        переводим каждую в 10 систему.
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <Image Source="Images/Example3.png" Height="287"/>
+                    </BlockUIContainer>
+                    <Paragraph FontFamily="Bookerly">
+                        <Run FontFamily="Forza" FontWeight="DemiBold">16 или 8 в 2</Run>
+                            <LineBreak/>
+                        Разбиваем число на символы, каждый символ переводим в 10 систему 
+                        (к примеру, символ A равен 10) и затем в двоичную.
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <Image Source="Images/Example4.png" Height="287"/>
+                    </BlockUIContainer>
+
+                    
+                    
+                    <!--===== ПоЧеМу? =====-->
+                    <Paragraph TextAlignment="Center" FontFamily="Forza">
+                        <Bold FontSize="22">Почему именно так?</Bold>
+                    </Paragraph>
+
+                    <!--===== Из любой систем в десятичную =====-->
+                    <Paragraph>
+                        <Bold FontFamily="Forza">Из любой систем в десятичную</Bold>
+                    </Paragraph>
+                    <Paragraph FontFamily="Bookerly">
+                        Суть позиционных (значения цифры зависит от её позиции)
+                            <LineBreak/>
+                        однородных (возможные символы для каждой позиции одинаковы)
+                            <LineBreak/>
+                        систем счисления (а именно с ними мы и работаем)
+                        заключается в том, что каждый последующий разряд (последующая позиция) имеет “вес”, 
+                        больший предыдущего в неизменное число раз:
+                            <LineBreak/>
+                        1824:
+                            <LineBreak/>
+                        4 - единицы; 2 - десятки (в 10 раз больше)
+                            <LineBreak/>
+                        8 - сотни (ещё в 10 раз больше); 1 - тысячи (и ещё в 10 раз больше)
+                            <LineBreak/>
+                        Поэтому степень 12 возрастала с каждым символом при переводе 714 из 12 системы в 10.
+                    </Paragraph>
+
+                    <!--===== Из десятичной в любую =====-->
+                    <Paragraph>
+                        <Bold FontFamily="Forza">Из десятичной в любую</Bold>
+                    </Paragraph>
+                    <Paragraph FontFamily="Bookerly">
+                        Теперь посмотрим на позиции с другой стороны.
+                            <LineBreak/>
+                        Число в десятичной системе счисления будет иметь в себе сколько-то единиц, десятков, сотен, тысяч и так далее.
+                            <LineBreak/>
+                        Этот факт является ключом к пониманию механизма перевода.
+                            <LineBreak/>
+                    </Paragraph>
+
+                    <Paragraph FontFamily="Bookerly">
+                        <Run FontFamily="Forza" FontWeight="DemiBold">Переведём 1024 в 7 систему</Run>
+                            <LineBreak/>
+                        <Run FontWeight="Heavy">Рекомендую взять листок бумаги и ручку.</Run>
+                            <LineBreak/>
+                        Итак, в числе по основанию 7 будут следующие разряды: сколько-то единиц, сколько-то семёрок, сколько-то по 49, сколько-то по 343, сколько-то по 5831...
+                            <LineBreak/>
+                        <Run FontWeight="Bold">1. </Run>
+                        Разделим число 1024 на 7, чтобы узнать сколько в нем цифр 7 и сколько единиц: 1024 : 7 = 146 (остаток 2).
+                            <LineBreak/>
+                        Теперь известно, что ответ содержит 2 единицы и 146 семёрок.
+                            <LineBreak/>
+                        <Run FontWeight="Bold">2. </Run>
+                        В следующем разряде должно быть 146 раз по 7, но 7 по 7 – это уже 49.
+                            <LineBreak/>
+                        Следовательно, в ответе число 49 содержится: 146 : 7 (или же 146 * 7 : 49) = 20 раз (остаток 6).
+                            <LineBreak/>
+                        6 лишних семёрок – ещё один разряд найден.
+                            <LineBreak/>
+                        <Run FontWeight="Bold">3. </Run>
+                        Имеем 20 по 49, но 7 по 49 – это уже 343. 20 : 7 = 2 (остаток 6).
+                            <LineBreak/>
+                        Таким образом, осталось 2 по 343 и ни разу по 5831 (так как 5831 - это 7 раз по 343).
+                            <LineBreak/>
+                        <Run FontStyle="Italic">Ответ: 2 по 343, 6 по 49, 6 по 7 и 2 по 1 - 2661</Run> 
+                            <LineBreak/>
+                        Все рассуждения в сокращенном виде:
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <Image Source="Images/Example5.png" Height="287"/>
+                    </BlockUIContainer>
+
+                    <!--===== Из 8 или 16 в 2, из 2 в 8 или 16 =====-->
+                    <Paragraph>
+                        <Bold FontFamily="Forza">Из 8 или 16 в 2, из 2 в 8 или 16</Bold>
+                    </Paragraph>
+                    <Paragraph FontFamily="Bookerly">
+                        Для одного символа двоичной системы существует два варианта: 0 и 1, восьмеричной – восемь: 0, 1, 2, 3, 4, 5, 6 и 7.
+                            <LineBreak/>
+                        Из этого следует, что, для того чтобы отобразить все варианты символа восьмеричной системы, понадобится 3 символа двоичной.
+                            <LineBreak/>
+                        Аналогично для шестнадцатеричной системы необходимо 4.
+                    </Paragraph>
+                    <Paragraph FontFamily="Bookerly">
+                        <Run FontFamily="Forza" FontWeight="DemiBold">Переведём 16 из 27 системы в 3</Run>
+                            <LineBreak/>
+                        1 символ двадцатисемеричной системы - 3 символа троичной:
+                            <LineBreak/>
+                        6 в троичной системе - это 020
+                            <LineBreak/>
+                        1 в троичной системе - это 001
+                            <LineBreak/>
+                        Теперь совместим результаты и уберём ненужные нули слева:
+                            <LineBreak/>
+                        <Run FontStyle="Italic">Ответ: 1020</Run>
+                            <LineBreak/>
+
+                        <Run FontFamily="Forza" FontWeight="DemiBold">Переведём F7O из 25 системы в 5</Run>
+                            <LineBreak/>
+                        F - пятнадцатый символ. 15 в пятеричной системе - это 30.
+                            <LineBreak/>
+                        7 в пятеричной системе - это 12.
+                            <LineBreak/>
+                        O - двадцатьчетвёртый символ. 24 в пятеричной системе - это 44.
+                            <LineBreak/>
+                        <Run FontStyle="Italic">Ответ: 301244</Run>
+                    </Paragraph>
+                    <!--===================== КОНЕЦ ТЕКСТА =========================-->
+                </FlowDocument>
+            </FlowDocumentScrollViewer>
+        </Grid>
+    </Grid>
+</Window>

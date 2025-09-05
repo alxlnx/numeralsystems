@@ -1,0 +1,37 @@
+C:\proj\csh\PROJECT\PROJECT\Main\bin\Release\NumeralSystems.exe.config
+C:\proj\csh\PROJECT\PROJECT\Main\bin\Release\NumeralSystems.exe
+C:\proj\csh\PROJECT\PROJECT\Main\bin\Release\NumeralSystems.pdb
+C:\proj\csh\PROJECT\PROJECT\Main\bin\Release\System.ValueTuple.dll
+C:\proj\csh\PROJECT\PROJECT\Main\bin\Release\System.ValueTuple.xml
+C:\proj\csh\PROJECT\PROJECT\Main\obj\Release\HelpWindow.g.cs
+C:\proj\csh\PROJECT\PROJECT\Main\obj\Release\MainWindow.g.cs
+C:\proj\csh\PROJECT\PROJECT\Main\obj\Release\App.g.cs
+C:\proj\csh\PROJECT\PROJECT\Main\obj\Release\NumeralSystems_MarkupCompile.cache
+C:\proj\csh\PROJECT\PROJECT\Main\obj\Release\NumeralSystems_MarkupCompile.lref
+C:\proj\csh\PROJECT\PROJECT\Main\obj\Release\HelpWindow.baml
+C:\proj\csh\PROJECT\PROJECT\Main\obj\Release\MainWindow.baml
+C:\proj\csh\PROJECT\PROJECT\Main\obj\Release\NumeralSystems.g.resources
+C:\proj\csh\PROJECT\PROJECT\Main\obj\Release\Main.Properties.Resources.resources
+C:\proj\csh\PROJECT\PROJECT\Main\obj\Release\Main.csproj.GenerateResource.cache
+C:\proj\csh\PROJECT\PROJECT\Main\obj\Release\Main.csproj.CopyComplete
+C:\proj\csh\PROJECT\PROJECT\Main\obj\Release\NumeralSystems.exe
+C:\proj\csh\PROJECT\PROJECT\Main\obj\Release\NumeralSystems.pdb
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\bin\Release\NumeralSystems.exe.config
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\bin\Release\NumeralSystems.exe
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\bin\Release\NumeralSystems.pdb
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\bin\Release\System.ValueTuple.dll
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\bin\Release\System.ValueTuple.xml
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\obj\Release\Main.csprojAssemblyReference.cache
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\obj\Release\HelpWindow.g.cs
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\obj\Release\MainWindow.g.cs
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\obj\Release\App.g.cs
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\obj\Release\NumeralSystems_MarkupCompile.cache
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\obj\Release\NumeralSystems_MarkupCompile.lref
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\obj\Release\HelpWindow.baml
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\obj\Release\MainWindow.baml
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\obj\Release\NumeralSystems.g.resources
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\obj\Release\Main.Properties.Resources.resources
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\obj\Release\Main.csproj.GenerateResource.cache
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\obj\Release\Main.csproj.CopyComplete
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\obj\Release\NumeralSystems.exe
+C:\proj\csh\NON-REVELANT\School Project\PROJECT\Main\obj\Release\NumeralSystems.pdb
